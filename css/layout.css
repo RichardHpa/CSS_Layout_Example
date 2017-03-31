@@ -1,0 +1,159 @@
+div, span{
+    min-height: 10px;
+    min-width: 10px;
+    border: solid #6AC5AC 3px;
+}
+
+.red{
+    border: solid #D64078 3px;
+}
+
+.block{
+    display: block;
+}
+
+.inline{
+    display: inline;
+}
+
+.none{
+    display: none;
+}
+
+.center{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.max{
+    max-width: 600px;
+}
+
+.min{
+    min-width: 100px;
+}
+
+.no-padding{
+    width: 500px;
+    margin: 20px auto;
+}
+
+.padding{
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border-width: 10px;
+}
+
+.box-sizing{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.static{
+    position: static;
+}
+
+.relative{
+    position: relative;
+}
+
+.relative2{
+    position: relative;
+    top: -20px;
+    left: 20px;
+    background-color: white;
+    width: 500px;
+    border: solid #D64078 3px;
+}
+
+.fixed{
+    position: fixed;
+    /*bottom: 0;*/
+    right: 0;
+    top:0;
+    width: 500px;
+    background-color: white;
+}
+
+.relative3{
+    position: relative;
+    width: 600px;
+    height: 600px;
+
+}
+
+.absolute{
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+}
+
+.max-600{
+    background-color: grey;
+    max-width: 600px;
+    color: white;
+    margin: 0 auto;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.box{
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background-color: white;
+}
+
+.box2{
+    border: solid #d64078 3px;
+    clear: both;
+}
+
+.clear{
+    clear: both;
+    display: block;
+    min-height: 0px;
+    min-width: 0px;
+    border: none;
+}
+
+.clearfix{
+    clear:both;
+    overflow: auto;
+    zoom:1;
+}
+
+.square{
+    float:left;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+
+.square2{
+    border: solid #d64078 3px;
+    clear: left;
+}
+
+.square-IB{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+
+
+
+

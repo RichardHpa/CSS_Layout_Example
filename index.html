@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>CSS Layout Examples</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/dashboard.css" rel="stylesheet">
+		
+		<!-- HAVE A LOOK HERE FOR ALL OF THE CSS PROPERTIES -->
+		<link rel="stylesheet" href="css/style.css">
+
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container text-center">
+				<h1 class="title">CSS Layout Examples</h1>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar">
+						<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+						<li><a href="#Display">Display Property</a></li>
+						<li><a href="#Margin">Margin: auto;</a></li>
+						<li><a href="#MinMax">Min and Max</a></li>
+					</ul>
+				</div>
+
+				<div class="col-sm-9 col-md-10 Examples">
+					<h1 class="page-header">CSS Layouts</h1>
+					
+					<a class="anchor" id="Display"></a>
+					<div>
+						<h3>Display Property</h3>
+						<!-- Display Block -->
+						<h4>Display Block</h4>
+						<p>By Default a div is a block element. It will always start on a new line and it will stretch out to fill its parent.<br>
+						Other common block elements are p, form, header, footer, section, and more.</p>
+						<div class="well">
+							<div class="block green">Display:Block</div>
+						</div>
+						<!-- Display Inline -->
+						<h4>Display Inline</h4>
+						<p>
+							spans are the standard inline elements. An inline element can wrap some text inside a paragraphand it won't disrupt the flow of the paragraph.<br>
+							a tags are the most common inline element because you often include links within your paragraphs
+						</p>
+						<div class="well">
+							<div>Lorem ipsum dolor sit amet, <span class="inline green">Display: inline</span> consectetur adipisicing elit. Provident sunt, perferendis omnis, earum beatae quam, repellat temporibus odit voluptatem aperiam voluptatum magni repudiandae dicta autem adipisci dolor suscipit accusantium praesentium.</div>
+						</div>
+						<!-- Display None -->
+						<h4>Display None</h4>
+						<p>
+							Another Common element is display None. It is commonly used in javascript to be able to hide and show elements without actually having to delete or recreate them. <br>
+							There is also a property called visability, the differnece between these are that display none will render the element as though it wasn't even on the page, but hidden will hide the element but it would still take some the space it would if it were fully visible.<br>
+							In the bellow section there is a div with the property of none.
+						</p>
+						<div class="well">
+							<div class="none"></div>
+						</div>
+					</div>
+
+					<hr>
+
+					<a class="anchor" id="Margin"></a>
+					<div>
+						<h3>Margin Auto</h3>
+						<p>
+							Giving a width to an element will prevent it from stretching out to the edges of its parent. Sometimes you might want this to stick int he middle of the parent instead of sticking to the edges. You could give it a set margin for each side. But if you want it to be even then give it a property of magin:0 auto. This will evenly split space from both sides to the parent.
+						</p>
+						<div class="well">
+							<div class="center green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat debitis commodi dignissimos dolor cumque, accusamus aliquam aliquid ipsa amet nihil necessitatibus, voluptate magnam itaque doloribus sunt similique deleniti quidem molestias.</div>
+						</div>
+					</div>
+
+					<hr>
+					
+					<a class="anchor" id="MinMax"></a>
+					<div>
+						<h3>Min and Max</h3>
+							
+					</div>
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+		<script src="js/vendor/holder.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>
