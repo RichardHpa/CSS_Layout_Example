@@ -13,6 +13,18 @@ a.anchor {
 	border: solid #6AC5AC 3px;
 }
 
+.red{
+	border: solid #D64078 3px;
+}
+
+.well{
+	overflow: auto;
+}
+
+code{
+	margin-bottom: 10px;
+}
+
 .block{
 	display: block;
 	padding: 10px;
@@ -29,4 +41,101 @@ a.anchor {
 .center{
     width: 600px;
     margin: 0 auto;
+}
+
+.width{
+	width: 600px;
+}
+
+.min{
+	min-width: 400px;
+}
+
+.max{
+	max-width: 600px;
+}
+
+.simple {
+  width: 500px;
+  margin: 20px auto;
+  box-sizing: content-box;
+}
+
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border-width: 10px;
+  box-sizing: content-box;
+}
+
+.boxsizing{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+.static{
+	position: static;
+}
+
+.relative1 {
+  position: relative;
+}
+
+.relative2 {
+  position: relative;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  width: 500px;
+}
+
+.relative3 {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.absolute {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+
+.max-600{
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.box {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+.clear {
+ 	clear: both;
+}
+
+.clearfix {
+	clear: both;
+  overflow: auto;
+  zoom: 1;
+}
+
+.grid-box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 1em;
 }

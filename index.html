@@ -42,14 +42,19 @@
 			<div class="row">
 				<div class="col-sm-3 col-md-2 sidebar">
 					<ul class="nav nav-sidebar">
-						<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
 						<li><a href="#Display">Display Property</a></li>
 						<li><a href="#Margin">Margin: auto;</a></li>
-						<li><a href="#MinMax">Min and Max</a></li>
+						<li><a href="#MinMax">Width, Min and Max</a></li>
+						<li><a href="#BoxModel">Box Models</a></li>
+						<li><a href="#Positioning">Positioning</a></li>
+						<li><a href="#Floats">Floats</a></li>
+						<li><a href="#Clear">Clear</a></li>
+						<li><a href="Media-Query">Meida Queries</a></li>
+						<li><a href="#inline-block">Inline-block</a></li>
 					</ul>
 				</div>
 
-				<div class="col-sm-9 col-md-10 Examples">
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 Examples">
 					<h1 class="page-header">CSS Layouts</h1>
 					
 					<a class="anchor" id="Display"></a>
@@ -57,6 +62,7 @@
 						<h3>Display Property</h3>
 						<!-- Display Block -->
 						<h4>Display Block</h4>
+						<code>display:block</code>
 						<p>By Default a div is a block element. It will always start on a new line and it will stretch out to fill its parent.<br>
 						Other common block elements are p, form, header, footer, section, and more.</p>
 						<div class="well">
@@ -64,17 +70,19 @@
 						</div>
 						<!-- Display Inline -->
 						<h4>Display Inline</h4>
+						<code>display:inline</code>
 						<p>
 							spans are the standard inline elements. An inline element can wrap some text inside a paragraphand it won't disrupt the flow of the paragraph.<br>
 							a tags are the most common inline element because you often include links within your paragraphs
 						</p>
 						<div class="well">
-							<div>Lorem ipsum dolor sit amet, <span class="inline green">Display: inline</span> consectetur adipisicing elit. Provident sunt, perferendis omnis, earum beatae quam, repellat temporibus odit voluptatem aperiam voluptatum magni repudiandae dicta autem adipisci dolor suscipit accusantium praesentium.</div>
+							<div>Lorem ipsum dolor sit amet, <span class="inline green"><code>Display: inline</code></span> consectetur adipisicing elit. Provident sunt, perferendis omnis, earum beatae quam, repellat temporibus odit voluptatem aperiam voluptatum magni repudiandae dicta autem adipisci dolor suscipit accusantium praesentium.</div>
 						</div>
 						<!-- Display None -->
 						<h4>Display None</h4>
+						<code>display:none</code>
 						<p>
-							Another Common element is display None. It is commonly used in javascript to be able to hide and show elements without actually having to delete or recreate them. <br>
+							Another Common element is display none. It is commonly used in javascript to be able to hide and show elements without actually having to delete or recreate them. <br>
 							There is also a property called visability, the differnece between these are that display none will render the element as though it wasn't even on the page, but hidden will hide the element but it would still take some the space it would if it were fully visible.<br>
 							In the bellow section there is a div with the property of none.
 						</p>
@@ -88,11 +96,14 @@
 					<a class="anchor" id="Margin"></a>
 					<div>
 						<h3>Margin Auto</h3>
+						<code>margin: 0 auto</code>
 						<p>
 							Giving a width to an element will prevent it from stretching out to the edges of its parent. Sometimes you might want this to stick int he middle of the parent instead of sticking to the edges. You could give it a set margin for each side. But if you want it to be even then give it a property of magin:0 auto. This will evenly split space from both sides to the parent.
 						</p>
 						<div class="well">
-							<div class="center green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat debitis commodi dignissimos dolor cumque, accusamus aliquam aliquid ipsa amet nihil necessitatibus, voluptate magnam itaque doloribus sunt similique deleniti quidem molestias.</div>
+							<div class="center green">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat debitis commodi dignissimos dolor cumque, accusamus aliquam aliquid ipsa amet nihil necessitatibus, voluptate magnam itaque doloribus sunt similique deleniti quidem molestias.
+							</div>
 						</div>
 					</div>
 
@@ -100,18 +111,293 @@
 					
 					<a class="anchor" id="MinMax"></a>
 					<div>
-						<h3>Min and Max</h3>
-							
+						<h3>Width, Min and Max</h3>
+						<h4>width</h4>
+						<code>width:600px</code>
+						<p>Giving a element a set width means that the element will always be that exact width. If you shring your window bellow that value, it will still always be that width and would go off the page. If you haven't given a value to height then it will change depending on the amount of content</p>
+						<div class="well">
+							<div class="width green">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+						</div>
+						<h4>Min Width</h4>
+						<code>min-width:400px</code>
+						<p>Using min-width means that the width of the element will never go bellow the minimum width we have given it. Once the browser gets smaller than the min-width. Similar to width, once the browser screen gets bellow the set value, the div will continue to go off the screen.</p>
+						<div class="well">
+							<div class="min green">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+						</div>
+						<h4>Max Width</h4>
+						<code>max-width:600px</code>
+						<p>Using max-width instead of width in situations will improve the browser's handling of small windows. This is important when making a site usable on mobile. Max width means that the width of the element will never extend the set value. When extending the device width, it will never grow bigger then what you set, when you shrink it though the height will continue to grow depeending on the content, and the width will shrink to fit the parent.</p>
+						<div class="well">
+							<div class="max green">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+						</div>
 					</div>
 
+					<hr>
 
+					<a class="anchor" id="BoxModel"></a>
+					<div>
+						<h3>Box Models</h3>
+						<p>When we set a width and height of an element, that element can actually be bigger than should be. The elements border and padding with stretch out the element beyond what it really is. By default elements have box-sizing: content-box.<br>the 2 divs bellow have the exact same width, the only difference is that the bottom one has padding and a thicker border added to it</p>
+						<div class="well">
+							<div class="simple green">I'm smaller...</div>
+							<div class="fancy green">And I'm bigger!</div>
+						</div>
+						<p>But there is a way to fix that</p>
+						<h4>Box Sizing</h4>
+						<code>box-sizing: border-box;</code>
+						<p>When you add box sizing to an element, it no longer increases its size. What it does it makes the max width, including the border and padding to be the width you set. Without box sizing, the padding and borders start on the outer edge of the element, but with it they start from the inner edge and move inwards in the element.<br>Since it is new we havve to use -webkit- and -moz- which enabales it on different browsers.<br>The bellow examples are the exact same as the one above, the only difference is that box sizing has been added.</p>
+						<div class="well">
+							<div class="simple green boxsizing">I'm smaller...</div>
+							<div class="fancy green boxsizing">And I'm bigger!</div>
+						</div>
+					</div>
 
+					<hr>
 
+					<a class="anchor" id="Positioning"></a>
+					<div>
+						<h3>Positioning</h3>
+						<h4>Position Static</h4>
+						<code>position:static</code>
+						<p>Static is the default position which means it isnt positioned in any special way </p>
+						<div class="well">
+							<div class="static green">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+						</div>
 
+						<h4>Position Relative</h4>
+						<code>postion:relative</code>
+						<p>By Default Relative behaves the same as static. When you add some extra properties to it, it will cause it to adjust away from its normal position, other content will not be adjusted to fit any gaps which are left</p>
+						<div class="well">
+							<div class="relative1 green">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+							<div class="relative2 red">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+						</div>
 
+						<h4>Position Fixed</h4>
+						<code>position:fixed</code>
+						<p>Position fixed is when you dont want an element to move when scorlling. It will always stay in the set position. Currently on this page, the sidebar has been given the position fixed.</p>
 
+						<h4>Position Absolute</h4>
+						<code>position:absolute</code>
+						<p>Absolute is the most trickiest positiong type. Absolute behaves like fixed, excepted relative to the nearest positioned parent rather than the viewpoint(device screen).<br>
+						If the absolute isnt in a parent with any positioning then it will take the body as its parent and still moves along with the page scrolling.</p>
+						<div class="well">
+							<div class="relative3 green">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								<div class="absolute red">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+							</div>
+						</div>
+					</div>
 
+					<hr>
 
+					<a class="anchor" id="Floats"></a>
+					<div>
+						<h3>Floats</h3>
+						<p>Float is a property which can shift anchor an element to either the right or left side of it's parent. Floats can also be used to wrap text around images.<br> Floating elements dont care about any of the other elements within its parent. It will literally float above them all.</p>
+						<h4>Float Left</h4>
+						<code>float:left</code>
+						<div class="well">
+							<div class="max-600 green">
+								<p>
+									<img class="left" src="http://placehold.it/350x150">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+								</p>
+							</div>
+						</div>
+						<h4>Float Right</h4>
+						<code>float:right</code>
+						<div class="well">
+							<div class="max-600 green">
+								<p>
+									<img class="right" src="http://placehold.it/350x150">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<hr>
+
+					<a class="anchor" id="Clear"></a>
+					<div>
+						<h3>Clear</h3>
+						<p>The clear property can either have 1 of 3 options, left, right or both. Depending on which one you choose you are saying that you don't want any floating elements on that side of the element. This often can be used when creating a css frameworks which utilizes rows.</p>
+						<h4>Before Clear</h4>
+						<div class="well">
+							<div class="box green">Box which is floating</div>
+							<div class="red"> I want this element bellow the float</div>
+						</div>
+						<h4>After Clear</h4>
+						<code>clear:both</code>
+						<div class="well">
+							<div class="box green">Box which is floating</div>
+							<div class="clear red"> This element clears the floats</div>
+						</div>
+
+						<h3>Clearfix Haxk</h3>
+						<p>When using floats, parent elements don't take the their height into consideration which often makes the height of the parent smaller than what it should be.<br>As you can see bellow, this can often happen when floating an image in a div. The image will overlap the edges of the parents and continue bellow it.</p>
+						<div class="well">
+							<div class="green">    	
+								<img class="right" src="http://placehold.it/350x350">
+						    	<p>
+							      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						    	</p>
+   							</div>
+						</div>
+						<p>We can fix this by what is commily called clearfix. Adding overflow:auto to the parent element will make its height take the floating element into consideration.</p>
+						<code>overflow:auto</code>
+						<div class="well">
+							<div class="green clearfix">    	
+								<img class="right" src="http://placehold.it/350x350">
+						    	<p>
+							      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						    	</p>
+   							</div>
+						</div>
+						<p><i>If we want this to work in IE6, we need to add zoom:1 to the css along with overflow:auto</i></p>
+					</div>
+
+					<hr>
+
+					<a class="anchor" id="Media-Query"></a>
+					<div>
+						<h3>Meida Queries</h3>
+						<p>Media queries are what is required to make a website responsive. This can make it that our website looks completly different on different devices.<br>before you start to add media queries you need to include the following meta tag into the head of all of your html pages</p>
+						<div class="well">
+							<p><pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre></p>
+						</div>
+						<p>You need to include this so your brower can figure out what is the default with of the device you are developing on.</p>
+						<p>Media Queries look like this</p>
+						<div class="well">
+							<!-- The indention is off in this section because when showing it would take all of the extra tabs into consideration and push the block of code to the right -->
+							<pre>
+								<code class="language-css" data-lang="css">
+<span>@media screen and (min-width:600px) {</span>
+	<span>.example {</span>
+		<span>width:100px;</span>
+		<span>height:100px;</span>
+		<span>background-color:red;</span>
+	<span>}</span>
+<span>}</span>
+<span>@media screen and (max-width:599px) {</span>
+	<span>.example {</span>
+		<span>width:400px;</span>
+		<span>height:400px;</span>
+		<span>background-color:blue;</span>
+	<span>}</span>
+<span>}</span>
+								</code>
+							</pre>
+						</div>
+						<p>What this is saying is, if the device width is bellow 599px, then have the height and width of .example is 500px and the background colour is blue.<br>But when the device gets to 600px or anything higher, then change the width and height to 100px and the background colour to red.<br>You can have as many media queries as you like and you can also combine min and max width.</p>
+						<div class="well">
+							<!-- The indention is off in this section because when showing it would take all of the extra tabs into consideration and push the block of code to the right -->
+							<pre>
+								<code class="language-css" data-lang="css">
+<span>@media screen and (min-width:600px) and (max-width:1000px){</span>
+
+<span>}</span>
+								</code>
+							</pre>
+						</div>
+						<p>This means that whatever is written in this section will only be applicable when the min width of the device is 600px, and the max width is 1000px;</p>
+					</div>
+
+					<hr>
+
+					<a class="anchor" id="inline-block"></a>
+					<div>
+						<h3>Inline-block</h3>
+						<code>display:inline-block</code>
+						<p>inline-block is another position property. This one is great for making grids and layours that can fill the browsers width and wraps with each other nicely. In the example bellow, each of the boxes have been given the property display:inline-block</p>
+						<div class="well">
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="grid-box green">Floating Box</div>
+							<div class="after-box red"> This is for after</div>
+						</div>
+						<p>In the past we could have still create this by giving each of these divs the property float:left. unfortunatly this meant that we would have had to clear anything bellow it so it's position wouldn't be effected if the grid doesn't reach the entire page.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -123,7 +409,7 @@
 		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-		<script src="js/vendor/holder.min.js"></script>
+		<script src="js/holder.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
 	</body>
